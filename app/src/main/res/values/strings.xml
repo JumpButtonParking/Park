@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">ParkQ</string>
-
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_booked">Booked</string>
+    <string name="thank_you_message">THANK YOU FOR BOOKING</string>
+    <string name="sunset_parking">SUNSET PARKING SERVICE</string>
+    <string name="time_to_time">(Today from TIME to TIME)</string>
 </resources>
