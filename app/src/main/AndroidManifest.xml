@@ -7,18 +7,27 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Booked"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_booked" >
+        </activity>
+
+        <activity
+            android:name=".booked_location"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_booked_location" >
         </activity>
     </application>
 

@@ -1,17 +1,7 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.parkq.android.parkq.Booked">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/background"/>
-
-    <LinearLayout
+ <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.parkq.android.parkq.MainActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -19,102 +9,225 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="5">
 
             <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/booked_location_background2"/>
+
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:layout_marginTop="16dp"
-                android:src="@drawable/xmark"/>
-
-            <RelativeLayout
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:adjustViewBounds="true"
-                    android:maxWidth="170dp"
-                    android:maxHeight="170dp"
-                    android:src="@drawable/backcircle"/>
-
-                <ImageView
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:src="@drawable/check"/>
-
-            </RelativeLayout>
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/booked_location_back_button"/>
 
         </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginTop="-35dp"
-            android:orientation="vertical">
+            android:layout_weight="7"
+            android:background="#45cce4">
 
             <TextView
-                android:id="@+id/thank_you_id"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
-                android:gravity="center_horizontal"
-                android:text="@string/thank_you_message"/>
-
-            <TextView
-                android:id="@+id/sunset_park_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textSize="24sp"
-                android:textColor="#45cce4"
-                android:gravity="center_horizontal"
-                android:text="@string/sunset_parking" />
-
-            <TextView
-                android:id="@+id/time_msg_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="@android:color/white"
-                android:gravity="center_horizontal"
-                android:text="@string/time_to_time"/>
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"/>
 
-                <Button
+                <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="5"
-                    android:text="DIRECTIONS"/>
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="8"
+                    android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                           <ImageView
+                               android:layout_width="0dp"
+                               android:layout_weight="1"
+                               android:layout_height="1dp"
+                               android:layout_marginTop="8dp"
+                               android:scaleType="centerCrop"
+                               android:src="@drawable/line"/>
+
+                            <TextView
+                                android:id="@+id/booked_current_time"
+                                android:layout_width="0dp"
+                                android:layout_weight="2.5"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Sept 9, 2015, 4AM"/>
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="8dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/line"/>
+
+                        </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="PAYMENT OPTION"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/credit_card_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/line"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="SUMMARY"/>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/line"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/booked_location_sunset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:text="SUNSET PARKING SERVICE"
+                        android:textIsSelectable="false"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Home Ave. 123 San Diego, CA"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="(619)-711-1111"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Wednesday, September 9, 2015"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="TIME: 3 Hours"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:text="RATE $12 an Hour"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/line"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="TOTAL"/>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/line"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="$36 FOR 3 HOURS"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:gravity="center"
+                        android:background="#45cce4"
+                        android:textColor="@android:color/white"
+                        android:layout_marginTop="4dp"
+                        android:text="PAY"
+                        android:clickable="true" />
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"/>
 
             </LinearLayout>
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
-
-</RelativeLayout>

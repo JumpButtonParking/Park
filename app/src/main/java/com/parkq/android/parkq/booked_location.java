@@ -1,30 +1,23 @@
 package com.parkq.android.parkq;
 
-import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 
-public class Booked extends ActionBarActivity {
-
+public class booked_location extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_booked);
-
-        TextView mytext = (TextView) findViewById(R.id.sunset_park_id);
-        Typeface mytype = Typeface.createFromAsset(this.getAssets(),"Lato-Black.ttf");
-        mytext.setTypeface(mytype);
-
+        setContentView(R.layout.activity_booked_location);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_booked, menu);
+        getMenuInflater().inflate(R.menu.menu_booked_location, menu);
         return true;
     }
 
