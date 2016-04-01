@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class booked_location extends ActionBarActivity {
+public class BookedLocation extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
