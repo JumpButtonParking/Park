@@ -8,6 +8,7 @@
     <string name="sunset_parking">SUNSET PARKING SERVICE</string>
     <string name="time_to_time">(Today from TIME to TIME)</string>
     <string name="title_activity_booked_location">booked_location</string>
+    <string name="search_hint">Where do you want to go?</string>
 
     <string-array name="credit_cards">
         <item>Visa ****1234</item>
